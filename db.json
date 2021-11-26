@@ -1,0 +1,23 @@
+{
+  "funcionarios": [
+    {
+      "name": "Ilivanilton",
+      "email": "ili@gmail.com",
+      "tel": "22222",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "João",
+      "tel": "000000",
+      "email": "ili@gmail.com"
+    }
+    ,
+    {
+      "id": 3,
+      "name": "João B",
+      "tel": "000000",
+      "email": "ili@gmail.com"
+    }
+  ]
+}
