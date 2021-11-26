@@ -7,17 +7,10 @@
       "id": 1
     },
     {
-      "id": 2,
-      "name": "João",
-      "tel": "000000",
-      "email": "ili@gmail.com"
-    }
-    ,
-    {
-      "id": 3,
-      "name": "João B",
-      "tel": "000000",
-      "email": "ili@gmail.com"
+      "name": "Rezende",
+      "email": "dfd@gmail.com",
+      "tel": "2232323",
+      "id": 2
     }
   ]
 }

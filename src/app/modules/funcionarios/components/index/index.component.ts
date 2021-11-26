@@ -18,4 +18,10 @@ export class IndexComponent implements OnInit {
       .subscribe( f => this.funcionarios = f)
   }
 
+  del(func: Funcionario, idx){
+    if(confirm("Tem certeza de que quer excluir este Funcionário?"))
+    this.funcionariosService.delete(func)
+      .subscribe( _ => this.funcionarios.splice(idx,1))
+  }
+
 }

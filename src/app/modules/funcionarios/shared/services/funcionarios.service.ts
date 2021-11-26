@@ -18,5 +18,26 @@ export class FuncionariosService {
     return this.http.get<Funcionario[]>(this.funcionariosUrl, this.httpOptions)
   }
 
+  get(id: number): Observable<Funcionario>{
+    let url = `${this.funcionariosUrl}/${id}`;
+    return this.http.get<Funcionario>(url)
+  }
+
+  create(funcionario: Funcionario): Observable<Funcionario>{
+    return this.http.post<Funcionario>(this.funcionariosUrl, funcionario, this.httpOptions)
+  }
+
+  delete(func: Funcionario | number): Observable<Funcionario>{
+    const id = typeof func == 'number' ? func : func.id
+    const url = `${this.funcionariosUrl}/${id}`;
+    return this.http.delete<Funcionario>(url, this.httpOptions)
+  }
+
+  update(funcionario: Funcionario): Observable<any>{
+    const url = `${this.funcionariosUrl}/${funcionario.id}`;
+    return this.http.put<Funcionario>(url, funcionario,this.httpOptions);
+  }
+
+
 
 }

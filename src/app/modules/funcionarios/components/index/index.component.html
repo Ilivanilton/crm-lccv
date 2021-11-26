@@ -4,9 +4,10 @@
   </div>
 
 
-<div class="mb-3">
-  <button type="submit" class="btn btn-primary">Adicionar</button>
-</div>
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary"
+    [routerLink]="['/funcionarios','new']" >Adicionar</button>
+  </div>
 
   <div class="table-responsive">
     <table class="table table-bordered table-hover">
@@ -26,7 +27,15 @@
           <td>{{f.tel }}</td>
           <td>{{ f.email }}</td>
           <td>
-          <td>edit / delete</td>
+          <td>
+            <button class="btn btn-success"
+            [routerLink]="['/funcionarios','edit',f.id]"
+            >Edit</button>
+
+            <button class="btn btn-danger"
+            (click)="del(f,i)"
+            >Delete</button>
+          </td>
         </tr>
       </tbody>
   </table>
